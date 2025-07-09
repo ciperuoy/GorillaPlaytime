@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using BepInEx;
 using UnityEngine;
@@ -11,21 +11,13 @@ namespace GorillaPlaytime
     {
         public string TimeElapsed = "";
         Stopwatch watch = new Stopwatch();
-        public void Start()
-        {
-            GorillaTagger.OnPlayerSpawned(Init);
-        }
-        
-        public void Init()
-        {
+        public void Awake() => 
             watch.Start();
-        }
-
-        public void Update()
-        {
+       
+        public void Update() =>
             TimeElapsed = watch.Elapsed.ToString(@"hh\:mm\:ss");
-        }
 
-        public void OnGUI() => GUI.Label(new Rect(10, 10, 200, 20), TimeElapsed);
+        public void OnGUI() => 
+            GUI.Label(new Rect(10, 10, 200, 20), TimeElapsed);
     }
 }
