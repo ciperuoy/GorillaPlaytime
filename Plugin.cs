@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 namespace GorillaPlaytime
 {
-    [BepInPlugin("ciperuoy.gorillaplaytime", "GorillaPlaytime", "1.0.1")]
+    [BepInPlugin("ciperuoy.gorillaplaytime", "GorillaPlaytime", "1.0.2")]
     public class Plugin : BaseUnityPlugin
     {
         private Stopwatch _watch;
