@@ -22,7 +22,7 @@ namespace GorillaPlaytime
         private void Update()
         {
             _timeElapsed = _watch.Elapsed.ToString(@"hh\:mm\:ss");
-            if (UnityInput.Current.GetKeyDown(KeyCode.Tab)
+            if (UnityInput.Current.GetKeyDown(KeyCode.Tab))
             {
                 _showGui = !_showGui;
             }
