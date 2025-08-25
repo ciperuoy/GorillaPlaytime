@@ -22,8 +22,10 @@ namespace GorillaPlaytime
         private void Update()
         {
             _timeElapsed = _watch.Elapsed.ToString(@"hh\:mm\:ss");
-            if (Keyboard.current != null && Keyboard.current.tabKey.wasPressedThisFrame)
+            if (UnityInput.Current.GetKeyDown(KeyCode.Tab))
+            {
                 _showGui = !_showGui;
+            }
         }
 
         private void OnGUI()
@@ -33,3 +35,4 @@ namespace GorillaPlaytime
         }
     }
 }
+
